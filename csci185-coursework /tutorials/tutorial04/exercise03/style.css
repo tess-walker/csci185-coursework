@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+  }
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#home {
+    background-color: rgb(191, 225, 255);
+}
+#bio {
+    background-color: rgb(164, 205, 255);
+    color: whitesmoke;
+}
+#portfolio {
+    background-color: rgb(89, 89, 253);
+    color: whitesmoke;
+}
+#contact {
+    background-color: rgb(85, 0, 255);
+    color: whitesmoke;
+}
+p, h1 {
+    padding: 2rem;
+}

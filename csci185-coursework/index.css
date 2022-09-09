@@ -1,0 +1,87 @@
+/* Font */
+
+@font-face {
+    font-family: NotoSansJP;
+    src: url('fonts/NotoSansJP-Medium.otf');
+font-weight: medium;
+font-style: normal;
+}
+@font-face {
+    font-family: NotoSansJP-B;
+    src: url('fonts/NotoSansJP-Bold.otf');
+font-weight: bold;
+font-style: normal;
+}
+
+/* Header */
+
+* {
+    font-family: "NotoSansJP", "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0rem;
+    border: 0;
+}
+header {
+    text-align: center;
+    background: #cfe3d8;
+    padding: 2rem;
+    height: 100%;
+    border: Solid #15998e;
+    border-width: 0 0 .4rem 0;
+}
+h1 > #header {
+    font-family: "NotoSansJP-B", "Helvetica Neue", Helvetica, sans-serif;
+    display: inline-block;
+    color: #45b08c;
+    font-size: 3.5rem;
+    text-decoration: none;
+}
+h1 > #header:hover {
+    color: #15998e;    
+}
+h1 {
+    display: inline;
+}
+
+/* Body grid */
+
+main {
+    aspect-ratio: 875/600;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url('images/layered-waves-haikei.svg'); /* SVG from haikai.com */
+}
+.container {
+    margin-top: 6rem;
+    line-height: 2.1rem;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-column-gap: 2rem;
+    grid-template-rows: 10rem 10rem 10rem 10rem;
+}
+ul {
+    list-style-type: square;
+}
+#tutorials {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: row1-start;
+    grid-row-end: 1;
+}
+#lectures {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: row2-start;
+    grid-row-end: 2;
+}
+#inspiration {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: row3-start;
+    grid-row-end: 3;
+    margin-bottom: 14rem;
+}
+h2 {
+    font-weight: bold;
+}
