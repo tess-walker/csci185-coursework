@@ -1,1 +1,1 @@
-# csci185-coursework :octocat:
+Tess Walker CSCI 105 Published Coursework :octocat:
