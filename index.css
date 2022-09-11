@@ -63,23 +63,29 @@ main {
 ul {
     list-style-type: square;
 }
-#tutorials {
+#homework {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: row1-start;
     grid-row-end: 1;
 }
-#lectures {
+#tutorials {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: row2-start;
     grid-row-end: 2;
 }
-#inspiration {
+#lectures {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: row3-start;
     grid-row-end: 3;
+}
+#inspiration {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: row4-start;
+    grid-row-end: 4;
     margin-bottom: 14rem;
 }
 h2 {
