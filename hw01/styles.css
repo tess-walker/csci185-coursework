@@ -83,7 +83,7 @@ h2 {
     justify-content: center;
 }
 .card > p, h3, img {
-    width: 420px;
+    width: 350px;
     line-height: 1.75rem;
 }
 #projects {
