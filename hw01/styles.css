@@ -15,6 +15,15 @@ body {
 html, body{
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ body {
+    display: grid;
+ }
+ .grid-item {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    line-height: 1.75rem;
  }
 ul {
     text-align: right;
@@ -28,6 +37,7 @@ li > a {
     color: whitesmoke;
 }
 #profile-pic {
+    width: 200px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -44,4 +54,90 @@ header {
     background-color: rgb(17, 184, 184);
     padding: .6rem;
     padding-bottom: 4rem;
+}
+#about {
+    margin-left: 14rem;
+    margin-right: 14rem;
+    line-height: 1.75rem;
+}
+h2 {
+    font-family: 'Libre Franklin', sans-serif;
+}
+.project-holder {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 14rem;
+    margin-right: 14rem;
+    column-gap: 8rem;
+    row-gap: 4rem;
+}
+.card {
+    justify-self: center
+}
+#projects > h2 {
+    padding-top: 2rem;
+    margin-left: 14rem;
+    margin-right: 14rem;
+    justify-content: center;
+}
+.card > p, h3, img {
+    width: 420px;
+    line-height: 1.75rem;
+}
+#projects {
+    background-color: lightgray;
+}
+#contact {
+    margin-left: 14rem;
+    margin-right: 14rem;
+}
+textarea {
+    width: 437px;
+}
+textarea, input {
+    background-color: lightgray;
+    border: none;
+    margin: .5rem;
+    padding: .75rem;
+}
+#submit {
+    padding: .3rem;
+    background-color: rgb(17, 184, 184);
+    border-radius: 3px;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: rgb(10, 142, 142);
+}
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 3rem;
+}
+footer > p {
+    margin-left: 14rem;
+    margin-right: 14rem;
+    display: inline-block;
+}
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3rem;
+}
+.contact-info {
+    justify-self: center;
+}
+.row > i, p{
+    display: inline-block;
+    margin-top: 0rem;
+}
+.row > i {
+    margin-left: 8rem;
+}
+.fa-house-chimney {
+    position: relative;
+    bottom: 55px;
+    right: 5.5px;
 }

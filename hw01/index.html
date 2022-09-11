@@ -12,12 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="grid-item-header">
         <nav>
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="profile">
@@ -25,7 +25,7 @@
             <h1>Welcome to my portfolio website</h1>
         </div>
     </header>
-    <section id="about">
+    <section id="about" class="grid-item">
         <h2>About Me</h2>
         <p>Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque.</p>
         <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi 
@@ -36,7 +36,7 @@
             vulputate lorem neque cubilia.
         </p>
     </section>
-    <section id="projects">
+    <section id="projects" class="grid-item">
         <h2>Projects</h2>
         <div class="project-holder">
             <section class="card">
@@ -61,7 +61,7 @@
             </section>
         </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="grid-item">
         <h2>Get In Touch</h2>
         <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
         <div class="contact-details">
@@ -101,8 +101,8 @@
             </section>
         </div>
     </section>
-    <footer>
-        <p>Copyright {{your name}}, 2022.</p>
+    <footer class="grid-item-footer">
+        <p>Copyright Tess Walker - 2022</p>
     </footer>
 </body>
 </html>
