@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Your CSS Code Here! */
+
+html, body{
+    padding: 0;
+    margin: 0;
+ }
+ul {
+    text-align: right;
+}
+ul > li {
+    display: inline;
+    padding-right: .6rem;
+}
+li > a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+#profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 2.5rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2.5rem;
+}
+header {
+    background-color: rgb(17, 184, 184);
+    padding: .6rem;
+    padding-bottom: 4rem;
+}
