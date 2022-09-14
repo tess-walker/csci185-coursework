@@ -4,10 +4,16 @@ body {
 
 main {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
     border: solid 4px orangered;
     width: 200px;
     height: 75px;
+    margin: .6rem;
+    text-align: center;
 }
