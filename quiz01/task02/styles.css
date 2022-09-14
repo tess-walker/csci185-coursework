@@ -1,3 +1,10 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+main {
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
 body {
     margin: 0;
 }
@@ -47,4 +54,19 @@ footer {
     padding: 30px;
     margin-top: 30px;
     text-align: center;
+}
+#card1, #card3, #card5 {
+    background-color: #EEEEEE;
+}
+#card2, #card4, #card6 {
+    background-color: #BCE5D6;
+}
+#card2 > img, #card4 > img, #card6 > img {
+    border-radius: 50%;
+}
+footer {
+    font-weight: bold;
+}
+main > p {
+    font-weight: bold;
 }
