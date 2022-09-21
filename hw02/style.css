@@ -220,6 +220,7 @@ nav > .selected {
     background: none;
     border: none;
     float: right;
+    margin-top: -1rem;
     padding-bottom: 1rem;
     cursor: pointer;
 }
@@ -256,6 +257,11 @@ nav > .selected {
     
 }
 
+@media screem and (max-width: 942px) {
+    #featured-content {
+        margin-left: 2rem;
+    }
+}
 @media screen and (max-width: 732px) {
     #sidebar {
         display: none;
@@ -271,5 +277,8 @@ nav > .selected {
     main {
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+    #featured-content {
+        max-width: 600px;
     }
 }
