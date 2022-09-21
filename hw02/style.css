@@ -185,18 +185,18 @@ nav > .selected {
 /* Part C: Artists Panel        */
 /*************************/
 
-#featured-content {
+ /* #featured-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 1.4rem;
     padding: 0;
     margin: 1rem;
-}
+} */
 .artist-card {
     background-color: #222222;
     border-radius: 10px;
-    min-width: 12rem;
-    max-height: 21rem;
+    width: 13rem;
+    max-height: 20rem;
     padding-left: .8rem;
     padding-right: .8rem;
 }
@@ -211,7 +211,7 @@ nav > .selected {
 }
 .card-footer {
     align-self: left;
-    font-size: .85rem;
+    font-size: .825rem;
     color: whitesmoke;
 }
 .play-button {
@@ -235,6 +235,16 @@ nav > .selected {
 }
 .artist-card:hover .play-button {
     opacity: 1;
+} 
+
+#featured-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:  center;
+    gap: 1.4rem;
+    padding: 0;
+    margin: 1rem;
 }
 
 /**************************/
@@ -242,15 +252,10 @@ nav > .selected {
 /**************************/
 
 @media screen and (max-width: 1000px) {
-    #featured-content {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+    
 }
 
-@media screen and (max-width: 700px) {
-    #featured-content {
-        grid-template-columns: 1fr 1fr;
-    }
+@media screen and (max-width: 732px) {
     #sidebar {
         display: none;
     }
@@ -265,5 +270,11 @@ nav > .selected {
     main {
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+}
+@media screen and (max-width: 472px) {
+    .artist-card {
+        width: 12rem;
+        max-height: 18rem;
     }
 }
