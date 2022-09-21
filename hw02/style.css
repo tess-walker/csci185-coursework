@@ -1,0 +1,232 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #9696;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    height: 100vh;
+    /* body tag is a grid */
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+}
+aside {
+    background-color: #000;
+    grid-column-start: 1;
+}
+header {
+    background: #111;
+    position: sticky;
+    padding-top: 1.25rem;
+    top: 0;
+}
+
+/* Uncomment to see borders:  */
+/* header, nav, article {
+    border: solid 5px teal;
+    padding: 10px;
+}
+main {
+    border: solid 5px hotpink;
+    padding: 10px;
+} */
+
+main {
+    background: #111;
+    grid-column-start: 2;
+    overflow-y: auto;
+    z-index: 3;
+}
+
+footer {
+    background: #222;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+}
+#sidebar > h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1.85rem;
+}
+#sidebar > a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding-left: .75rem;
+}
+#sidebar > a:hover {
+    border: solid 4px #58b760;
+    border-width: 0 0 0 2px;
+}
+#sidebar > .selected {
+    border: solid 4px #58b760;
+    border-width: 0 0 0 2px;
+}
+.selected {
+    cursor: pointer;
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 1rem;
+    margin-bottom: -1rem;
+}
+header > a { 
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+#upgrade {
+    border: #969696 2px solid;
+    border-radius: 1rem;
+    text-align: center;
+    width: 7.5rem;
+    padding: .32rem;
+    margin-left: auto;
+    margin-right: 1.35rem;
+}
+#profile {
+    border: #222221 2px solid;
+    background-color: #222221;
+    border-radius: 1rem;
+    text-align: center;
+    width: 7.5rem;
+    padding: .32rem;
+    margin-left: auto;
+    margin-right: .75rem;
+}
+nav {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: .75rem;
+}
+nav > a {
+    margin-left: .85rem;
+    margin-right: .85rem;
+    padding-bottom: .17rem;
+}
+nav > a:hover {
+    border: solid 4px #58b760;
+    border-width: 0 0 2px 0;
+}
+nav > .selected {
+    border: solid 4px #58b760;
+    border-width: 0 0 2px 0;
+}
+
+/*************************/
+/* Part C: Artists Panel        */
+/*************************/
+
+#featured-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 1rem;
+}
+.artist-card {
+    background-color: #222222;
+    border-radius: 10px;
+    min-width: 12rem;
+}
+.artist-card > div {
+    display: grid;
+    padding-top: 1rem;
+}
+.artist-card > div > img  {
+    border-radius: 50%;
+    max-width: 11rem;
+    place-self: center;
+}
+.card-footer {
+    align-self: left;
+    padding-left: .8rem;
+    font-size: .85rem;
+    color: whitesmoke;
+}
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+@media screen and (max-width: 1000px) {
+    #featured-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #featured-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    #sidebar {
+        display: none;
+    }
+    #upgrade {
+        display: none;
+    }
+    aside {
+        position: absolute;
+        visibility:hidden;
+        display:none;
+    }
+    main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
