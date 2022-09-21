@@ -272,9 +272,3 @@ nav > .selected {
         grid-column-end: 3;
     }
 }
-@media screen and (max-width: 472px) {
-    .artist-card {
-        width: 12rem;
-        max-height: 18rem;
-    }
-}
