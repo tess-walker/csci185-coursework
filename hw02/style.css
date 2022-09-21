@@ -1,9 +1,8 @@
 body {
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    color: #9696;
+    color: #969699;
 }
 a, a:hover, a:visited, a:active { 
-    color: #fff;
     text-decoration: none;
 }
 
@@ -37,6 +36,9 @@ header {
     position: sticky;
     padding-top: 1.25rem;
     top: 0;
+}
+h1 > a {
+    color: whitesmoke;
 }
 
 /* Uncomment to see borders:  */
@@ -100,10 +102,10 @@ footer {
     font-weight: 400;
     margin-bottom: 1rem;
     padding-left: .75rem;
+    color: #969699;
 }
 #sidebar > a:hover {
-    border: solid 4px #58b760;
-    border-width: 0 0 0 2px;
+    color: whitesmoke;
 }
 #sidebar > .selected {
     border: solid 4px #58b760;
@@ -137,6 +139,10 @@ header > a {
     padding: .32rem;
     margin-left: auto;
     margin-right: 1.35rem;
+    color: #969699;
+}
+#upgrade:hover {
+    background-color: #191919;
 }
 #profile {
     border: #222221 2px solid;
@@ -147,6 +153,12 @@ header > a {
     padding: .32rem;
     margin-left: auto;
     margin-right: .75rem;
+    color: #969699;
+}
+#profile:hover {
+    background-color: #191919;
+    border-color: #191919;
+    ;
 }
 nav {
     display: inline-block;
@@ -158,6 +170,7 @@ nav > a {
     margin-left: .85rem;
     margin-right: .85rem;
     padding-bottom: .17rem;
+    color: #969699;
 }
 nav > a:hover {
     border: solid 4px #58b760;
@@ -175,7 +188,7 @@ nav > .selected {
 #featured-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1.4rem;
     padding: 0;
     margin: 1rem;
 }
@@ -183,6 +196,9 @@ nav > .selected {
     background-color: #222222;
     border-radius: 10px;
     min-width: 12rem;
+    max-height: 21rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
 }
 .artist-card > div {
     display: grid;
@@ -195,9 +211,30 @@ nav > .selected {
 }
 .card-footer {
     align-self: left;
-    padding-left: .8rem;
     font-size: .85rem;
     color: whitesmoke;
+}
+.play-button {
+    opacity: 0;
+    background: none;
+    border: none;
+    float: right;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+.play-button > i {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    color: whitesmoke;
+    background-color: #58b760;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.artist-card:hover .play-button {
+    opacity: 1;
 }
 
 /**************************/
