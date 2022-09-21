@@ -278,7 +278,4 @@ nav > .selected {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    #featured-content {
-        max-width: 600px;
-    }
 }
