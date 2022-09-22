@@ -237,6 +237,7 @@ nav > .selected {
 }
 .artist-card:hover .play-button {
     opacity: 1;
+    transition: ease-in-out .2s;
 } 
 
 #featured-content {
