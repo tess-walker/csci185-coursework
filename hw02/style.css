@@ -222,6 +222,7 @@ nav > .selected {
     margin-top: -1rem;
     padding-bottom: 1rem;
     cursor: pointer;
+    transition: all .15s ease-in-out;
 }
 .play-button > i {
     display: grid;
@@ -236,7 +237,6 @@ nav > .selected {
 }
 .artist-card:hover .play-button {
     opacity: 1;
-    transition: ease-in-out .2s;
 } 
 
 #featured-content {
@@ -277,5 +277,8 @@ nav > .selected {
     main {
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+    #featured-content {
+        max-width: 664px;
     }
 }
