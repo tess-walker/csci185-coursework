@@ -4,6 +4,4 @@ document.querySelector('#secret').innerHTML = secret;
 
 
 function check() {
-    // your code here.
-    console.log("your code here!");
 }
