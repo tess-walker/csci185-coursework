@@ -35,30 +35,45 @@ const frank = [
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
     drawGrid(canvasWidth, canvasHeight);
+    drawPixelArt(heart, 20, 20, 15);
+    drawPixelArt(frank, 120, 250, 12);
+    drawPixelArt(heart, 420, 250, 8);
+    drawPixelArt(heart, 55, 415, 6);
+    drawPixelArt(heart, 350, 135, 5);
+    drawPixelArt(frank, 315, 380, 15);
+    drawPixelArt(frank, 420, 10, 10);
 
-    // first 6 rows of frank
-    drawRow(frank[0], 150, 150, 25);
-    drawRow(frank[1], 150, 175, 25);
-    drawRow(frank[2], 150, 200, 25);
-    drawRow(frank[3], 150, 225, 25);
-    drawRow(frank[4], 150, 250, 25);
-    drawRow(frank[5], 150, 275, 25);
+    for (let i = 0; i < frank.length; i++) {
+        drawRow(frank[i], 150, 150 + i*25, 25);
+    }
 
-    // first 6 rows of the heart
-    drawRow(heart[0], 450, 350, 15);
-    drawRow(heart[1], 450, 365, 15);
-    drawRow(heart[2], 450, 380, 15);
-    drawRow(heart[3], 450, 395, 15);
-    drawRow(heart[4], 450, 410, 15);
-    drawRow(heart[5], 450, 425, 15);
-
+    for(let i = 0; i < heart.length; i++) {
+        drawRow(heart[i], 600, 150 + i*25, 25);
+    }
 }
 
 function drawRow (row, topX, topY, pixelWidth) {
 
     for (let i = 0; i < row.length; i++) {
-        fill('#CCC');
+        if(row[i] === 0) {
+            noFill()
+        }
+        else if (row[i] === 1) {
+            fill('hotPink')
+        }
+        else if (row[i] === 2) {
+            fill('black')
+        }
+        else if (row[i] === 3) {
+            fill('white')
+        }
         square(topX, topY, pixelWidth)
         topX += pixelWidth;
+    }
+}
+function drawPixelArt(grid, topX, topY, pixelWidth,cOne,cTwo,cThree) {
+    for (let i = 0; i < grid.length; i++) {
+        drawRow(grid[i], topX, topY, pixelWidth);
+        topY += pixelWidth;
     }
 }
