@@ -54,10 +54,9 @@ main {
 }
 .container {
     margin-top: 6rem;
-    line-height: 2.1rem;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-column-gap: 2rem;
+    grid-gap: 2rem;
     grid-template-rows: 10rem 10rem 10rem 10rem;
 }
 ul {
