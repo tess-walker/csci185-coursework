@@ -8,7 +8,8 @@ const c1 = {
     width: 200,
     speed: 8,
     color: 'hotpink'
-};
+}
+
 const c2 = {
     x: 1300,
     y: 300,
