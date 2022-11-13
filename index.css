@@ -39,7 +39,7 @@ h1 > #header:hover {
     color: #15998e;    
 }
 h1 {
-    display: inline;Kf
+    display: inline;
 }
 
 /* Body grid */
@@ -57,7 +57,7 @@ main {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-gap: 2rem;
-    grid-template-rows: 10rem 10rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem 10rem 10rem, 10rem;
 }
 ul {
     list-style-type: square;
