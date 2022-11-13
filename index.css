@@ -71,21 +71,27 @@ ul {
 #tutorials {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: row2-start;
+    grid-row-start: 2;
     grid-row-end: 2;
 }
 #lectures {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: row3-start;
+    grid-row-start: 3;
     grid-row-end: 3;
 }
 #inspiration {
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: row4-start;
-    grid-row-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
     margin-bottom: 14rem;
+}
+#projects {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
 }
 h2 {
     font-weight: bold;
