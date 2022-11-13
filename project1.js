@@ -1,13 +1,32 @@
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight; 
     
+let r, g, b;
+
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
 }
+// bird variables 
+
+const yellowbird = {
+    x: 275,
+    y: 133,
+    size: 100,
+    speed: 6
+}
+
+const redbird = {
+    x: 275,
+    y: 480,
+    size: 180,
+    speed: 5
+}
+
+let wavearr = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 0, - 1, -2, -3, -4, -5, -6, -7, -6, -5, -4, -3, -2, -1, 0] // ...sorry
 
 // Cloud variables 
 
-let speed = 5;
+let speed = 1;
 
 const cloud1 = {
     x: 100,
@@ -23,9 +42,9 @@ const cloud2 = {
     speed: 4.25
 }
 
-const bird = {
-    speed: 5,
-}
+r = random(255); // task 11 - random ass colors
+g = random(255);
+b = random(255);
 
 function draw() {
     clear();
@@ -33,14 +52,23 @@ function draw() {
     // draws landscape:
    drawLandscape()
 
+    yellowbird.x += yellowbird.speed + random(2, -2) // Task one ~ moving creature
+    yellowbird.y = yellowbird.y + random(5, -5)  // Task two ~ different kinds of """motion"""
+
+    redbird.x = redbird.x + random(2, -2) // Task four ~ different animations
+    redbird.y = redbird.y + random(2, -2) // he's trying his best
+
+    /* for (let i = 0; i < wavearr.length; i++) {
+        console.log( wavearr[i] );
+        drawCreature2(yellowbird.x, 133 + wavearr[i], yellowbird.size, 'yellow',  'black') // I tried :(
+    }  */
 
     //draws birds
 
     // "how abstract does a creature have to be to be considered a creature?""
 
-    drawCreature(275, 480, 180, 119.7, 'black', 'red');
-
-    drawCreature2(1000, 133, 100, 'yellow',  'black')
+    drawCreature(redbird.x, redbird.y, redbird.size, 120, 'black', 'red');
+    drawCreature2(yellowbird.x, yellowbird.y, yellowbird.size, 'yellow',  'black')
 
     //moves clouds
     cloud1.x += cloud1.speed;
@@ -62,15 +90,8 @@ function draw() {
         cloud2.x = -100
     }
 
-    c1.x += c1.speed;
-
-    c2.x -= c2.speed;
-
-    if (c1.x > window.innerWidth + 100) {
-        c1.x = 100
-    }
-    if (c2.x < 0 - 100) {
-        c2.x = window.innerWidth - 100
+    if (yellowbird.x > window.innerWidth + 100) {
+        yellowbird.x = -100
     }
 
 }
@@ -96,7 +117,7 @@ function drawTree(x, y, h, w ) {
 function drawCreature(x, y, w, h, fillColor1, fillColor2){
     fill(fillColor1)
     rect(x, y, w, h);
-    fill(fillColor2)
+    fill(r, g, b, 127 )
     rect(x, y, w * .8, h * .8);
     fill(fillColor1)
     circle(x + (w * .2), y + (h * .2), (h + w) * .05) 
@@ -133,3 +154,8 @@ function drawCloud(x, y, size) {
     circle(x - 22.5, y + 8, size - 17.5);
 }
 
+    function mousePressed() {
+          r = random(255);
+          g = random(255);
+          b = random(255);
+        }
