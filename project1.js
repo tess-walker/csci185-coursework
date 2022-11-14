@@ -22,7 +22,7 @@ const redbird = {
     speed: 5
 }
 
-let wavearr = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 0, - 1, -2, -3, -4, -5, -6, -7, -6, -5, -4, -3, -2, -1, 0] // ...sorry
+// let wavearr = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 0, - 1, -2, -3, -4, -5, -6, -7, -6, -5, -4, -3, -2, -1, 0] // ...sorry
 
 // Cloud variables 
 
@@ -119,7 +119,8 @@ function drawCreature(x, y, w, h, fillColor1, fillColor2){
     rect(x, y, w, h);
     fill(r, g, b, 127 )
     rect(x, y, w * .8, h * .8);
-    fill(fillColor1)
+    fill("white")
+    stroke("black")
     circle(x + (w * .2), y + (h * .2), (h + w) * .05) 
     strokeWeight(1);
     stroke(fillColor1);
